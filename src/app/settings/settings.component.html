@@ -1,0 +1,25 @@
+<div>
+	<div>
+		<label>Cycles</label>
+		<input type="number" value="4" [(ngModel)]="timerService.timerCycles" />
+  </div>
+		<div>
+			<label>Work Interval</label>
+			<input type="number" value="25" [(ngModel)]="timerService.workInterval" />
+  </div>
+			<div>
+				<label>Short Break</label>
+				<input type="number" value="5" [(ngModel)]="timerService.shortBreak" />
+  </div>
+				<div>
+					<label>Long Break</label>
+					<input type="number" value="15" [(ngModel)]="timerService.longBreak" />
+  </div>
+					<div>
+						<input type="checkbox" [(ngModel)]="timerService.autoStart"/> <label>Auto-Start</label>
+					</div>
+					<p>The total pomodoro length is
+						{{ timerService.timerCycles * timerService.workInterval + (timerService.timerCycles - 1) * timerService.shortBreak + timerService.longBreak}}
+						minutes
+					</p>
+				</div>

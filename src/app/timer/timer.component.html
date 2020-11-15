@@ -1,0 +1,21 @@
+<div>
+	<div *ngIf="taskService.activeTask.id > 0">{{taskService.activeTask.description}}</div>
+	<div *ngIf="timerService.timerType=='w'">Work</div>
+	<div *ngIf="timerService.timerType=='s'">Short Break</div>
+	<div *ngIf="timerService.timerType=='l'">Long Break</div>
+	<div>{{timerService.timeLeft}}</div>
+	<div class="cycles">
+		<span *ngFor="let cycle of [].constructor(timerService.timerCycles); let i = index">
+		<!--dotted circle-->
+    <span *ngIf="i < timerService.cycle">&#9679;</span>
+		<!--empty circle-->
+		<span *ngIf="i == timerService.cycle">&#9675;</span>
+		<!--full circle-->
+		<span *ngIf="i > timerService.cycle">&#9676;</span>
+		</span>
+	</div>
+	<button (click)="timerService.startTimer()">Start</button>
+	<button (click)="timerService.stopTimer()">Stop</button>
+	<button (click)="timerService.resetTimer()">Reset</button>
+	<button (click)="timerService.skipTimer()">Skip</button>
+</div>

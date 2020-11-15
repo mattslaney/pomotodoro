@@ -1,0 +1,9 @@
+<ul>
+	<li *ngFor="let task of tasks | slice:1">
+		<span>{{task.id}}</span>
+		<a (click)="selectTask(task)">{{task.description}}</a>
+		<span (click)="delete(task)">x</span>
+	</li>
+</ul>
+<label>New Task:</label><input #taskDesc />
+<button (click)="add(taskDesc.value); taskDesc.value=''">Add</button>

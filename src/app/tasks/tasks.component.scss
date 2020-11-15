@@ -1,0 +1,44 @@
+@import "../../theme";
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+li {
+  margin: 10px;
+}
+
+li span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #bf4342;
+  text-align: center;
+}
+li span:first-child {
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-left: 1px solid #bf4342;
+  border-top: 1px solid #bf4342;
+  border-bottom: 1px solid #bf4342;
+}
+li span:last-child {
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right: 1px solid #bf4342;
+  border-top: 1px solid #bf4342;
+  border-bottom: 1px solid #bf4342;
+}
+
+li a {
+  background-color: #7e1811;
+  cursor: pointer;
+  border: 1px solid #bf4342;
+  display: inline-block;
+  width: 250px;
+  height: 25px;
+  text-align: center;
+}

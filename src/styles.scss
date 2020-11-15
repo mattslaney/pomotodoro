@@ -1,0 +1,19 @@
+@import "theme";
+
+body {
+  color: $lightTextColor;
+  background-color: $bgColor;
+  font-family: sans-serif;
+}
+
+a {
+  color: $lightTextColor;
+}
+
+a:hover {
+  color: $linkColor;
+}
+
+.dark-text {
+  color: $darkTextColor;
+}

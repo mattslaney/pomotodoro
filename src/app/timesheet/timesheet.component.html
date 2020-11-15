@@ -1,0 +1,27 @@
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Task ID</th>
+				<th>Task Description</th>
+				<th>Time-on-task</th>
+				<th>Cycles</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let task of tasks">
+				<td>{{task.id}}</td>
+				<td>{{task.description}}</td>
+				<td>{{ task.timeOnTask == undefined ? "00:00" : (task.timeOnTask - (task.timeOnTask % 60)) / 60 + ":" + ("0" + (task.timeOnTask % 60)).slice(-2) }}
+				</td>
+				<td>{{ task.completeCycles == undefined ? 0 : task.completeCycles }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Total Time: </td>
+				<td></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
